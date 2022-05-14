@@ -7,7 +7,7 @@ import Data.Void
 import Text.Megaparsec
 import Text.Megaparsec.Char
 import qualified Text.Megaparsec.Char.Lexer as L
-import Type (LispVal (..))
+import Types (LispVal (..))
 
 -- * Parsec Parser type
 
@@ -49,6 +49,3 @@ lispVal = do
 -- | Run the parser
 whispRunParser :: T.Text -> Either (ParseErrorBundle T.Text Void) LispVal
 whispRunParser = parse lispVal "<input>"
--- whispRunParser input = case parse lispVal "<input>" input of
---   Left err -> Left err
---   Right xs -> Right xs
