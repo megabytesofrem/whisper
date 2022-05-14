@@ -22,7 +22,7 @@ maintainer:         dhillonwilk@gmail.com
 extra-source-files: CHANGELOG.md
 
 library
-    exposed-modules:  Parser, Interpreter, Types
+    exposed-modules:  Parser, Interpreter, Types, Display
 
     -- Modules included in this library but not exported.
     --other-modules: Interpreter
@@ -44,6 +44,7 @@ executable whisp
     default-extensions: OverloadedStrings
     build-depends:
         base ^>=4.14.3.0,
+        text,
         containers,
         mtl,
         megaparsec,

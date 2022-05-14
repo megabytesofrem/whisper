@@ -1,0 +1,3 @@
+(def test "hello")
+(def test2 123)
+(test)
